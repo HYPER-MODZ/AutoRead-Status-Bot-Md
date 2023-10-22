@@ -73,7 +73,7 @@ if (global.db) setInterval(async () => {
   }, 30 * 1000)
 
 async function startAshiSingh() {
-const { state, saveState } = await useMultiFileAuthState(`./session.json`)
+const { state, saveState } = await useSingleFileAuthState(`./session.json`)
     const AshiSingh = AshiSinghConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
